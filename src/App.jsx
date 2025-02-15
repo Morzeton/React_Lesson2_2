@@ -33,6 +33,7 @@ export const App = () => {
 		<div className={styles.container}>
 		<div className={styles.card}>
 			<h1>Инструкция по готовке пельменей</h1>
+			<h2>{steps[activeIndex].title}</h2>
 			<div className={styles.steps}>
 			<div className={styles['steps-content']}>
 				{steps[activeIndex].content}
@@ -45,7 +46,7 @@ export const App = () => {
 						styles['steps-item'],
 						{
 						  [styles.active]: index === activeIndex,
-						  [styles.done]: index < activeIndex,
+						  [styles.done]: index < activeIndex, // Пройденные шаги
 						}
 					  )}
 					>
